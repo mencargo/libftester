@@ -6,7 +6,7 @@
 #    By: jtoty <jtoty@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/01/23 18:26:01 by jtoty             #+#    #+#              #
-#    Updated: 2022/05/17 17:00:26 by dalgara-         ###   ########.fr        #
+#    Updated: 2022/05/17 17:55:16 by dalgara-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,40 +34,6 @@ do
 		"-c")				OPT_NO_COLOR=1 ;;
 		"-f")				OPT_NO_FORBIDDEN=1 ;;
 		"-n")				OPT_NO_NORMINETTE=1 ;;
-		"-op1")				OPT_NO_PART2=1
-							OPT_NO_BONUS=1
-							OPT_NO_ADDITIONAL=1
-							CHECK_IN_PART1=0
-							CHECK_IN_PART2=0
-							CHECK_IN_BONUS=0
-							CHECK_IN_ADDITIONAL=0 ;;
-		"-op2")				OPT_NO_PART1=1
-							OPT_NO_BONUS=1
-							OPT_NO_ADDITIONAL=1
-							CHECK_IN_PART2=0
-							CHECK_IN_PART1=0
-							CHECK_IN_BONUS=0
-							CHECK_IN_ADDITIONAL=0 ;;
-		"-ob")				OPT_NO_PART1=1
-							OPT_NO_PART2=1
-							OPT_NO_ADDITIONAL=1
-							CHECK_IN_BONUS=0
-							CHECK_IN_PART2=0
-							CHECK_IN_PART1=0
-							CHECK_IN_ADDITIONAL=0 ;;
-		"-oa")				OPT_NO_PART1=1
-							OPT_NO_PART2=1
-							OPT_NO_BONUS=1
-							CHECK_IN_ADDITIONAL=0
-							CHECK_IN_BONUS=0
-							CHECK_IN_PART2=0
-							CHECK_IN_PART1=0 ;;
-		"-p1")				OPT_NO_PART1=1
-							CHECK_IN_PART1=0 ;;
-		"-p2")				OPT_NO_PART2=1
-							CHECK_IN_PART2=0 ;;
-		"-b")				OPT_NO_BONUS=1
-							CHECK_IN_BONUS=0 ;;
 		"-a")				OPT_NO_ADDITIONAL=1
 							CHECK_IN_ADDITIONAL=0 ;;
 		*ft_*)	for part in ${tab_all_part[*]}
