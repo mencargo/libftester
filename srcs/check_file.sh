@@ -34,46 +34,6 @@ check_makefile()
 	else
 		printf "${COLOR_FAIL}\nnot found${DEFAULT}\n"
 	fi
-}
-
-check_auteur()
-{
-	printf "\nAuthor file"
-	if [ -e "${PATH_LIBFT}"/auteur ] || [ -e "${PATH_LIBFT}"/author ]
-	then
-		if [ -e "${PATH_LIBFT}"/auteur ]
-		then
-			AUTHOR_VAR="auteur"
-		else
-			AUTHOR_VAR="author"
-		fi
-		printf "\033[15GCheck file content\n"
-		printf "${COLOR_OK}found${DEFAULT}"
-		if [ $(wc -l "${PATH_LIBFT}"/${AUTHOR_VAR} | tr -d ' ' | head -c 1) -gt 1 ]
-		then
-			printf "\033[15G${COLOR_FAIL}Too many lines in your file\n${DEFAULT}"
-		elif [ $(wc -c "${PATH_LIBFT}"/${AUTHOR_VAR} | tr -d ' ' | head -c 1) -eq 0 ]
-		then
-			printf "\033[15G${COLOR_FAIL}Empty file\n${DEFAULT}"
-		elif [ "$(cat -e "${PATH_LIBFT}"/${AUTHOR_VAR} | grep '\$')" != "" ]
-		then
-			if [ "$(norminette "${PATH_LIBFT}"/${AUTHOR_VAR} 2>&1 | grep command)" != "" ]
-			then
-				printf "\033[15G${COLOR_OK}$(cat "${PATH_LIBFT}"/${AUTHOR_VAR})${DEFAULT}\n"
-			else
-				if [ "$(cat "${PATH_LIBFT}"/${AUTHOR_VAR})" != "$(echo $(whoami))" ]
-				then
-					printf "\033[15G${COLOR_FAIL}Wrong login\n${DEFAULT}"
-				else
-					printf "\033[15G${COLOR_OK}$(cat "${PATH_LIBFT}"/${AUTHOR_VAR})${DEFAULT}\n"
-				fi
-			fi
-		else
-			printf "\033[15G${COLOR_FAIL}'\\\n' missing${DEFAULT}\n"
-		fi
-	else
-		printf "${COLOR_FAIL}\nnot found${DEFAULT}\n"
-	fi
 	printf "\n"
 }
 
@@ -82,7 +42,7 @@ check_header()
 	printf "Header file"
 	if [ -e "${PATH_LIBFT}"/${HEADER_DIR}/libft.h ]
 	then
-		printf "\033[15GNorme\n"
+		printf "\033[15GNorm\n"
 		printf "${COLOR_OK}found${DEFAULT}"
 		if [ ${OPT_NO_NORMINETTE} -eq 1 ]
 		then
@@ -102,7 +62,7 @@ check_header()
 			then
 				printf "${COLOR_FAIL}\033[15Gcheck failed${DEFAULT}\n"
 				echo "$NORME_VAR" | grep -E '(Error|Warning)' >> "${PATH_DEEPTHOUGHT}"/deepthought
-				printf "Norme check failed\n" >> "${PATH_DEEPTHOUGHT}"/deepthought
+				printf "Norm check failed\n" >> "${PATH_DEEPTHOUGHT}"/deepthought
 			else
 				printf "${COLOR_OK}\033[15Gok${DEFAULT}\n"
 			fi
@@ -122,6 +82,5 @@ func_check_file()
 	printf "%.s${CHAR_LENGTH}" $(seq 1 ${TITLE_LENGTH})
 	printf "\n\n${DEFAULT}"
 	check_makefile
-	check_auteur
 	check_header
 }

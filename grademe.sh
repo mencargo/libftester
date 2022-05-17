@@ -6,7 +6,7 @@
 #    By: jtoty <jtoty@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/01/23 18:26:01 by jtoty             #+#    #+#              #
-#    Updated: 2022/05/17 10:22:02 by dalgara-         ###   ########.fr        #
+#    Updated: 2022/05/17 17:00:26 by dalgara-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,9 +23,9 @@ source "${PATH_TEST}"/srcs/variables.sh
 for arg in ${@}
 do
 	case "${arg}" in
-		"--help")			man "${PATH_TEST}"/srcs/help.1
+		"--help")			man "${PATH_TEST}"/srcs/help
 							exit ;;
-		"-h")				man "${PATH_TEST}"/srcs/help.1
+		"-h")				man "${PATH_TEST}"/srcs/help
 							exit ;;
 		"-d")				DIRECTORY=1 ;;
 		"-s")				OPT_NO_SEARCH=1 ;;
@@ -34,7 +34,6 @@ do
 		"-c")				OPT_NO_COLOR=1 ;;
 		"-f")				OPT_NO_FORBIDDEN=1 ;;
 		"-n")				OPT_NO_NORMINETTE=1 ;;
-		"-u")				OPT_NO_UPDATE=1 ;;
 		"-op1")				OPT_NO_PART2=1
 							OPT_NO_BONUS=1
 							OPT_NO_ADDITIONAL=1
@@ -112,14 +111,8 @@ source "${PATH_TEST}"/srcs/check_norme.sh
 source "${PATH_TEST}"/srcs/compil_lib.sh
 source "${PATH_TEST}"/srcs/diff_test.sh
 source "${PATH_TEST}"/srcs/test_function.sh
-source "${PATH_TEST}"/srcs/check_update.sh
 
 cd "${PATH_TEST}"
-
-if [ ${OPT_NO_UPDATE} -eq 0 ]
-then
-	func_check_update
-fi
 
 source "${PATH_TEST}"/my_config.sh
 
