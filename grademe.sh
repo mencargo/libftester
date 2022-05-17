@@ -6,7 +6,7 @@
 #    By: jtoty <jtoty@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/01/23 18:26:01 by jtoty             #+#    #+#              #
-#    Updated: 2022/05/17 09:52:24 by dalgara-         ###   ########.fr        #
+#    Updated: 2022/05/17 10:22:02 by dalgara-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -272,7 +272,7 @@ then
 	printf "Abort : ${RED}A${DEFAULT} Bus error : ${RED}B${DEFAULT} Segmentation fault : ${RED}S${DEFAULT} Timeout : ${RED}T${DEFAULT} Nothing turned in : ${RED}NTI${DEFAULT}\n"
 	printf "\n"
 fi
-printf "A deepthought file has been generated in ${COLOR_DEEPTHOUGHT_PATH}\"${PATH_DEEPTHOUGHT}\"\n\n${DEFAULT}"
+printf "A deepthought file has been generated in ${COLOR_DEEPTHOUGHT_PATH}\"${PATH_DEEPTHOUGHT}/deepthought\"\n\n${DEFAULT}"
 make --no-print-directory -C "${PATH_LIBFT}" fclean > /dev/null
 
 # nuke_it_all

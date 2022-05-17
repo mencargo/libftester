@@ -6,7 +6,7 @@
 #    By: jtoty <jtoty@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/01/23 18:27:09 by jtoty             #+#    #+#              #
-#    Updated: 2022/05/17 10:05:45 by dalgara-         ###   ########.fr        #
+#    Updated: 2022/05/17 10:18:25 by dalgara-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,7 +53,7 @@ test_function()
 	printf "\n${COLOR_PART}$(echo ${part} | cut -d _ -f 1)\n\n"
 	printf "${COLOR_TITLE}"
 	printf "FUNCTION"
-	printf "\033[${NORME_COL}GNORME"
+	printf "\033[${NORME_COL}GNORM"
 	printf "\033[${CHEAT_COL}GFORBIDDEN"
 	printf "\033[${COMPIL_COL}GCOMPILE"
 	printf "\033[${TEST_COL}GTESTS"
