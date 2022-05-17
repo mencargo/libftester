@@ -5,18 +5,13 @@
 ###################################
 
 #Edit the next line with the path of your libft project.
-PATH_LIBFT="../"
+PATH_LIBFT=~/src/42/cursus/libft
 
-#If you use a relative path, don't put double quotes.
-#For example :
-#PATH_LIBFT=~/libft		==> Right
-#PATH_LIBFT="~/libft"	==> Wrong
-
-#If you encounter some problems with a relative path, use an absolute path.
-#You can put double quotes with the absolute path.
-#For example :
-#PATH_LIBFT=/home/user/libft	==> Right
-#PATH_LIBFT="/home/user/libft"	==> Right
+#For relative paths don't use quotes, you can use them in absolute paths:
+#Examples:
+#PATH_LIBFT=~/libft
+#PATH_LIBFT=/home/user/libft
+#PATH_LIBFT="/home/user/libft"
 
 
 ##############
