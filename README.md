@@ -1,11 +1,7 @@
-# PREAMBLE
-This is an edit of prev libftest made by @jtoty to fit with the 2019 project libft. <br/>
-(ORIGINAL REP : https://github.com/jtoty/Libftest) <br/>
-This update was made by @lmartin <br/>
-
-# libft-war-machine
+# libftester
 <img align="right" src="./srcs/img_readme.png" width="50%"/>
 This repository contains script to test your libft project.
+
 The script will do the following tests :
 
 - Check if the author file exists
@@ -24,58 +20,44 @@ At the end of the tests, a deepthought file will be created, inside which you
 can find all the results and error/failure messages. You can also see your
 results in tests directory.
 
-The script will compil your files with your libft, so you must have your
+The script will compile your files with your libft, so you must have your
 Makefile up to date.
-
-:warning:All the tests made are not the official tests:warning:
 
 ## Getting Started
 
-### Installation
+### Install
 
 ```bash
-git clone https://github.com/y3ll0w42/libft-war-machine
+git clone git@github.com:mencargo/libftester
 ```
 
-### Configuration
+### Setup
 
-If you run the script for the first time, it will automatically create
-`my_config.sh` file and ask you to edit it with the path of your libft
-project.
-You can also choose the colors that will be used and the path where the
-deepthought file will be created.
+Specify your libft project path in **my_config.sh** with `PATH_LIBFT`.
 
-#### Custom directories
+You can also choose the colors that will be used and the path where the deepthought file will be created.
 
-If you use custom directories for your header and source files; you should specify there name in my_config.sh.
-
-The following variables must be set:
-```
-HEADER_DIR
-SRC_DIR
-```
-Exemple:
+If you use custom directories for your header and source files you need to config `HEADER_DIR` and `SRC_DIR`, like:
 ```
 HEADER_DIR="includes"
 SRC_DIR="srcs"
 ```
 
+### Usage
 
-## Running script
-
-Go to the directory where you cloned and run the script
+Runs with **bash**, from it's folder
 ```bash
 bash grademe.sh
 ```
-or simply run the script with the path
+or elsewhere using it's path
 ```bash
-bash /path/where/you/cloned/grademe.sh
+bash /path/where/you/cloned/libftester/grademe.sh
 ```
 
 ### Options available
 | Option | Description |
 | --- | --- |
-| `-h`<br />`--help` | Display help and exit |
+| `-h, --help` | Display help and exit |
 | `-d` | Allows to perform the tests even if the files are in directories |
 | `-c` | Disable color |
 | `-s` | Disable searching Makefile and author files |
@@ -101,13 +83,10 @@ bash grademe.sh ft_atoi -f ft_strlen -n
 ```
 
 ### Supported functions
-All the supported functions are listed [on this page](https://github.com/y3ll0w42/libft-war-machine/blob/master/supported_functions.md).
-## Contribution
-
-Any suggestions or bugs reporting ?
-Contact lmartin@student.42.fr
+All the supported functions are listed [on this page](https://github.com/mencargo/libftester/blob/master/supported_functions.md).
 
 ### Contributors
+- lmartin : https://github.com/y3ll0w42
 - jtoty : https://github.com/jtoty
 - jmichaud : https://github.com/MrJe
 - tlernoul
