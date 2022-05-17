@@ -61,14 +61,14 @@ bash /path/where/you/cloned/libftester/grademe.sh
 | `-d` | Allows to perform the tests even if the files are in directories |
 | `-c` | Disable color |
 | `-s` | Disable searching Makefile and author files |
-| `-m` | When compiling library, test all the Makefile's rules (default: make re and check if other rules exist) |
+| `-m` | Test all the Makefile's rules (default: make re and check if other rules exist) |
 | `-l` | Disable compiling library |
 | `-f` | Disable checking forbidden functions |
 | `-n` | Disable norminette |
 | `-u` | Disable checking updates at launch |
 | `-p1` | Disable part 1 tests |
 | `-p2` | Disable part 2 tests |
-| `-b`| Disable bonus part tests |
+| `-b` | Disable bonus part tests |
 | `-a` | Disable additional part tests |
 | `-op1`| Do only part 1 tests |
 | `-op2`| Do only part 2 tests |
