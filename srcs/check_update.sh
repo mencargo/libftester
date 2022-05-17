@@ -6,11 +6,13 @@
 #    By: jtoty <jtoty@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/01/23 18:26:27 by jtoty             #+#    #+#              #
-#    Updated: 2017/01/23 18:26:28 by jtoty            ###   ########.fr        #
+#    Updated: 2022/05/17 10:45:19 by dalgara-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #!/bin/bash
+
+# user instead of changelog: git log -5 --pretty=format:%B
 
 func_check_update()
 {
