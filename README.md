@@ -1,8 +1,8 @@
 # libftester
 <img align="right" src="./srcs/img_readme.png" width="50%"/>
-This repository contains script to test your libft project.
+This repository contains a script to test your libft project.
 
-The script will do the following tests :
+The script will do the following tests:
 
 - Check if the author file exists
 - Check content of the author file
@@ -11,7 +11,7 @@ The script will do the following tests :
 - Check if the Makefile file exists
 - Check rules in Makefile
 - Check compilation's flag in Makefile
-- Compil library
+- Compile the library
 - Check norme errors
 - Check forbidden functions
 - Tests functions
@@ -45,7 +45,7 @@ SRC_DIR="srcs"
 
 ### Usage
 
-Runs with **bash**, from it's folder
+Run with **bash**, from it's folder
 ```bash
 bash grademe.sh
 ```
@@ -61,7 +61,7 @@ bash /path/where/you/cloned/libftester/grademe.sh
 | `-d` | Allows to perform the tests even if the files are in directories |
 | `-c` | Disable color |
 | `-s` | Disable searching Makefile and author files |
-| `-m` | When compiling library, test all the Makefile's rules (instead of doing only make re and checking if other rules exist). |
+| `-m` | When compiling library, test all the Makefile's rules (default: make re and check if other rules exist) |
 | `-l` | Disable compiling library |
 | `-f` | Disable checking forbidden functions |
 | `-n` | Disable norminette |
@@ -74,19 +74,15 @@ bash /path/where/you/cloned/libftester/grademe.sh
 | `-op2`| Do only part 2 tests |
 | `-ob` | Do only bonus part tests |
 | `-oa` | Do only additional part tests |
-| `ft_function` | Test only this function |
+| `ft_function` | Test only this function, supported functions are listed [here](https://github.com/mencargo/libftester/blob/master/supported_functions.md) |
 
-Add successively all options you want, in the order you want.
-For example :
+Add all the options you want, in the order you want, like:
 ```bash
 bash grademe.sh ft_atoi -f ft_strlen -n
 ```
 
-### Supported functions
-All the supported functions are listed [on this page](https://github.com/mencargo/libftester/blob/master/supported_functions.md).
-
 ### Contributors
-- lmartin : https://github.com/y3ll0w42
-- jtoty : https://github.com/jtoty
-- jmichaud : https://github.com/MrJe
+- lmartin: https://github.com/y3ll0w42
+- jtoty: https://github.com/jtoty
+- jmichaud: https://github.com/MrJe
 - tlernoul
