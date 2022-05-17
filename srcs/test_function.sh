@@ -6,7 +6,7 @@
 #    By: jtoty <jtoty@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/01/23 18:27:09 by jtoty             #+#    #+#              #
-#    Updated: 2021/02/04 07:13:42 by lmartin          ###   ########.fr        #
+#    Updated: 2022/05/17 10:05:45 by dalgara-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,12 +50,12 @@ check_turned_in_file()
 
 test_function()
 {
-	printf "\n${COLOR_PART}$(echo ${part} | cut -d _ -f 1) functions\n\n"
+	printf "\n${COLOR_PART}$(echo ${part} | cut -d _ -f 1)\n\n"
 	printf "${COLOR_TITLE}"
 	printf "FUNCTION"
 	printf "\033[${NORME_COL}GNORME"
-	printf "\033[${CHEAT_COL}GFORBIDDEN FUNC."
-	printf "\033[${COMPIL_COL}GCOMPIL."
+	printf "\033[${CHEAT_COL}GFORBIDDEN"
+	printf "\033[${COMPIL_COL}GCOMPILE"
 	printf "\033[${TEST_COL}GTESTS"
 	printf "\033[${RESULT_COL}GRESULT\n${DEFAULT}"
 
@@ -110,9 +110,9 @@ test_function()
 					diff_test $function
 				else
 					printf "\033[${CHEAT_COL}G"
-					printf "${COLOR_FAIL}compil. failed${DEFAULT}"
+					printf "${COLOR_FAIL}compiler fail${DEFAULT}"
 					printf "\033[${TEST_COL}G"
-					printf "${COLOR_FAIL}compil. failed${DEFAULT}"
+					printf "${COLOR_FAIL}compiler fail${DEFAULT}"
 					result=0
 				fi
 				check=$?

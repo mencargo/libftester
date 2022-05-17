@@ -6,7 +6,7 @@
 #    By: jtoty <jtoty@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/01/23 18:26:01 by jtoty             #+#    #+#              #
-#    Updated: 2021/02/04 07:07:10 by lmartin          ###   ########.fr        #
+#    Updated: 2022/05/17 09:52:24 by dalgara-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -119,22 +119,6 @@ cd "${PATH_TEST}"
 if [ ${OPT_NO_UPDATE} -eq 0 ]
 then
 	func_check_update
-fi
-
-if [ ! -e "${PATH_TEST}"/my_config.sh ]
-then
-	printf "${BOLD}my_config.sh${DEFAULT} file is not found.\n"
-	printf "Creating file...\n"
-	if [ -e "${PATH_TEST}"/srcs/config_template.sh ]
-	then
-		cp "${PATH_TEST}"/srcs/config_template.sh "${PATH_TEST}"/my_config.sh
-		printf "File created with success in ${BOLD}${PURPLE}${PATH_TEST}\n${DEFAULT}"
-		printf "${RED}${UNDERLINE}Edit my_config.sh file${DEFAULT} with the path of your libft project and launch script.\n"
-	else
-		printf "Can't create my_config.sh file, try to update or clone again the repository and retry.\n"
-		exit
-	fi
-	exit
 fi
 
 source "${PATH_TEST}"/my_config.sh
